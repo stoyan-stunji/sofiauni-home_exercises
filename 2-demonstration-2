@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+	//double x;
+	//cin >> x;
+
+	//double nominator = x / (2 * x - 1);
+	//double denominator = cos(x) * cos(x) / fabs(pow(x, 5) - 1);
+	//double result = sin(sqrt(nominator / denominator));
+
+	//cout << result;
+	
+	double x = 0;
+	cin >> x;
+
+	double a = x / (2 * x - 1);
+	double b = cos(x) * cos(x) / fabs(pow(x, 5) - 1);
+
+	double c = sin(sqrt(a / b));
+
+	cout << c << endl;
+}
