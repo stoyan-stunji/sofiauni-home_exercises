@@ -1,0 +1,28 @@
+//cout << "x = ";
+//double x;
+//cin >> x;
+
+//double n = sqrt(2 * pow(x, 3) - 1) + sin(2 * x);
+//double d = fabs(sin(x) + cos(x) * cos(x)) + 0.5;
+//double f = n / d;
+
+//cout << f << endl;
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+	double x = 0;
+	cin >> x;
+	double a = (sqrt((2 * x * x * x) - 1)) + sin(2 * x);
+	double b = (fabs(sin(x) + pow(cos(x), 2))) + 0.5;
+
+	double final = a / b;
+
+	cout << final << endl;
+
+	return 0;
+}
