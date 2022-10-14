@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int a = 0;
+	
+	cin >> a;
+
+	int a1 = a % 10;
+	a = a / 10;
+
+	int a2 = a % 10;
+	a = a / 10;
+
+	int a3 = a % 10;
+
+	int sum = a1 + a2 + a3;
+
+	cout << "Ones: " << a1 << " Tens: " << a2 << " Hundreds: " << a3 << " Sum: " << sum << endl;
+}
