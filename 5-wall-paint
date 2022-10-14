@@ -1,0 +1,35 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+
+	cout << "Wall Height:" << endl;
+	double h = 0;
+	cin >> h;
+	cout << "Wall Lenght:" << endl;
+	double l = 0;
+	cin >> l;
+	cout << "Paint Per Square Meter:" << endl;
+	double paintPerSqM = 0;
+	cin >> paintPerSqM;
+	cout << "Box Weight (in Kg):" << endl;
+	double boxKG = 0;
+	cin >> boxKG;
+
+	double area = h * l;
+	double paintNeeded = (area * paintPerSqM) / 1000;
+	double boxNeeded = paintNeeded / boxKG;
+
+	if (boxNeeded = 1)
+	{
+		cout << ceil(boxNeeded) << " box of paint is required." << endl;
+	}
+	else
+	{
+		cout << ceil(boxNeeded) << " boxes of paint are required." << endl;
+	}
+
+}
