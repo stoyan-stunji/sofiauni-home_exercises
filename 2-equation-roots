@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+	// x^2 + 3x - 4 = 0
+
+	int a = 1;
+	int b = 3;
+	int c = -4;
+
+	int d = b * b - (4 * a * c);
+
+	if (d < 0)
+	{
+		cout << "The equation has no real roots." << endl;
+	}
+
+	cout << "The discriminant root is " << d << endl;
+
+	int x1 = (-b + sqrt(d)) / 2 * a;
+	int x2 = (-b - sqrt(d)) / 2 * a;
+
+	cout << "The first root is " << x1 << endl;
+	cout << "The second root is " << x2 << endl;
+
+}
