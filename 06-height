@@ -1,0 +1,12 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+	double height = 0.0;
+	cin >> height;
+
+	cout << "You are " << height << " metres tall." << endl;
+}
