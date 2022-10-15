@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Enter a character: \n";
+    char character;
+    cin >> character;
+
+    bool isSmallLetter = (character >= 'a' && character <= 'z');
+    bool isBigLetter = (character >= 'A' && character <= 'Z');
+    bool isNumber = (character >= '1' && character <= '9');
+
+    if (isSmallLetter)
+    {
+        character = character - ('a' - 'A');
+        cout << character << endl;
+    }
+    else if (isBigLetter)
+    {
+        character = character + ('a' - 'A');
+        cout << character << endl;
+    }
+    else if (isNumber)
+    {
+        int number = character - '0';
+        cout << number * number << endl;
+    }
+
+    return 0;
+}
+
