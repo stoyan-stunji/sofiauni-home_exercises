@@ -1,0 +1,62 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Enter side A: \n";
+    int a = 0;
+    cin >> a;
+    cout << "Enter side B: \n";
+    int b = 0;
+    cin >> b;
+    cout << "Enter side C: \n";
+    int c = 0;
+    cin >> c;
+
+    double a2 = a * a;
+    double b2 = b * b;
+    double c2 = c * c;
+
+    if (c >= a + b || a >= b + c || b >= c + a)
+    {
+        cout << "Invalid values for the sides of the triangle." << endl; // разностранен
+    }
+    else
+    {
+        bool areAllEqualSides = (a == b) && (b == c);
+        bool areTwoEqualSides = (a == b) || (b == c) || (c == a);
+
+        if (areAllEqualSides)
+        {
+            cout << "The triangle is equilateral." << endl; // равностранен
+        }
+        else if (areTwoEqualSides)
+        {
+            cout << "The triangle is isosceles." << endl; // равнобедрен
+        }
+        else
+        {
+            cout << "The triangle is scalene." << endl; // разностранен
+        }
+
+        bool isRightAngled = (a2 == b2 + c2) || (b2 == a2 + c2) || (c2 == b2 + a2);
+        bool isAcuteAngled = a2 < b2 + c2 && b2 < a2 + c2 && c2 < b2 + a2;
+
+        if (isRightAngled)
+        {
+            cout << "The triangle is right-angled." << endl; // правоъгълен
+        }
+        else if (isAcuteAngled)
+        {
+            cout << "The triangle is acute-angled." << endl; // остроъгълен
+        }
+        else
+        {
+            cout << "The triangle is obtuse." << endl; // тъпоъгълен
+        }
+
+        return 0;
+    }
+}
+
