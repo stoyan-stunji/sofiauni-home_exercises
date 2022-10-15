@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+	int sideA = 0;
+	cout << "Enter side a (in cm): \n";
+	cin >> sideA;
+	cout << "Enter side b (in cm): \n";
+	int sideB = 0;
+	cin >> sideB;
+
+	int area = sideA * sideB;
+
+	if (sideA == sideB)
+	{
+		cout << "The area of the square is " << area << " cm." << endl;
+	}
+	else
+	{
+		cout << "The area of the rectangle is " << area << " cm." << endl;
+	}
+}
