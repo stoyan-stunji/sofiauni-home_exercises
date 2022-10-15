@@ -1,0 +1,20 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+	cout << "Enter the first number: \n";
+	int firstN = 0;
+	cin >> firstN;
+	cout << "Enter the second number: \n";
+	int secondN = 0;
+	cin >> secondN;
+
+	int tempN = firstN;
+	secondN == firstN;
+
+	cout << "The new first number is " << secondN << "." << endl;
+	cout << "The new second number is " << tempN << "." << endl;
+}
