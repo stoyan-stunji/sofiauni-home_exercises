@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Enter a number: \n";
+    int firstN = 0;
+    cin >> firstN;
+    cout << "Enter another number: \n";
+    int secondN = 0;
+    cin >> secondN;
+
+    bool isDivisible = firstN % secondN == 0;
+
+    if (isDivisible)
+    {
+        cout << firstN << " can be divided by " << secondN << "." << endl;
+    }
+    else
+    {
+        cout << firstN << " cannot be divided by " << secondN << "." << endl;
+    }
+
+    return 0;
+}
+
