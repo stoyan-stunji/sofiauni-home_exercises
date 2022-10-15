@@ -1,0 +1,38 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    //a
+    cout << "A) Is this number dividible by 3 && 5 or 2 && 7?\n";
+    cout << "Enter a number: \n";
+    int number = 0;
+    cin >> number;
+
+    bool isDivisible = (number % 3 == 0 && number % 5 == 0) || (number % 2 == 0 && number % 7 == 0);
+
+    cout << boolalpha << isDivisible << endl;
+
+    //b
+    cout << "\n";
+    cout << "B) Does this equation a^2 + bx + c = 0 have real roots?\n";
+    cout << "Enter the first coefficient: \n";
+    int fc1 = 0;
+    cin >> fc1;
+    cout << "Enter the second coefficient: \n";
+    int sc2 = 0;
+    cin >> sc2;
+    cout << "Enter the third coefficient: \n";
+    int tc3 = 0;
+    cin >> tc3;
+
+    bool isDiscriminantBiggerThanO = (sc2 * sc2 - 4 * fc1 * tc3) >= 0;
+
+    cout << boolalpha << isDiscriminantBiggerThanO << endl;
+
+    //c
+    
+    return 0;
+}
