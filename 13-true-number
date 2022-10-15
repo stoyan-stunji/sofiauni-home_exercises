@@ -16,13 +16,8 @@ int main()
 
     bool areThereSameNumbers = (ones == tens) || (tens == hundreds) || (hundreds == ones);
 
-    if (areThereSameNumbers)
-    {
-        cout << "You have a cool number." << endl;
-    }
-    else
-    {
-        cout << "You do not have a cool number." << endl;
-    }
+    cout << boolalpha << areThereSameNumbers << endl;
+
+    return 0;
 }
 
