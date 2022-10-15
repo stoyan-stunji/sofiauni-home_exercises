@@ -1,0 +1,45 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Enter the image dimensions (in pixels): \n";
+    int imageWidth = 0;
+    cin >> imageWidth;
+    int imageHeight = 0;
+    cin >> imageHeight;
+
+    const int THUMB_SIZE = 100;
+
+    int thumbWidth = 0;
+    int thumbHeight = 0;
+    
+    if (imageHeight > 0 && imageHeight > 0)
+    {
+        if (imageHeight <= THUMB_SIZE && imageHeight <= THUMB_SIZE)
+        {
+            thumbWidth = imageWidth;
+            thumbHeight = imageHeight;
+        }
+        else if (imageWidth > imageHeight)
+        {
+            thumbWidth = THUMB_SIZE;
+            thumbHeight = THUMB_SIZE * imageHeight / imageWidth;
+        }
+        else
+        {
+            thumbHeight = THUMB_SIZE;
+            thumbWidth = THUMB_SIZE * imageWidth / imageHeight;
+        }
+        cout << "Thumbnail dimensions: " << thumbWidth << "x" << thumbHeight << " pixels" << endl;
+    }
+    else
+    {
+    cout << "Error! Enter only positive dimensions." << endl;
+    }
+
+    return 0;
+
+}
+
