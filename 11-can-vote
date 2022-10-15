@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	cout << "Enter age: \n";
+	int age = 0;
+	cin >> age;
+
+	bool isLegalToVote = age >= 18;
+
+	if (isLegalToVote)
+	{
+		cout << "This person can vote." << endl;
+	}
+	else
+	{
+		cout << "This person cannot vote." << endl;
+	}
+
+	return 0;
+}
+
