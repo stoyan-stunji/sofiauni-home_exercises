@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "The price of a single product is (in lv.): \n";
+    double priceSingleProduct = 0;
+    cin >> priceSingleProduct;
+    cout << "How many products are bougth?: \n";
+    int count = 0;
+    cin >> count;
+
+    double price = priceSingleProduct * count;
+
+    if (price > 100)
+    {
+        price = price - (price * 0.1);
+        // price = price * 0.9;
+    }
+
+    cout << "The total price is " << price << " lv." << endl;
+
+    return 0;
+}
+
