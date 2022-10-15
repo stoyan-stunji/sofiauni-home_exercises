@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Is x in this interval (-infinity, -3] U [-2, -1) U [0, 2)? \nEnter a number: \n";
+    double x = 0;
+    cin >> x;
+
+    bool isInInterval = (x <= -3) || (x >= -2 && x < -1) || (x >= 0 && x < 2);
+
+    cout << boolalpha << isInInterval << endl;
+
+}
+
