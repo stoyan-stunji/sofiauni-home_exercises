@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Enter the depth of the tyre's protector: \n";
+    int depthOfProtector = 0;
+    cin >> depthOfProtector;
+    cout << "Enter the age of the tyre: \n";
+    int tyreAge = 0;
+    cin >> tyreAge;
+
+    if (depthOfProtector < 4 || tyreAge >= 6)
+    {
+        cout << "You should change your tyre!" << endl;
+    }
+    else
+    {
+        cout << "You may drive with this tyre, but be careful!" << endl;
+    }
+    
+    return 0;
+}
+
