@@ -1,0 +1,35 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    double sideA = 0;
+    double sideB = 0;
+    double sideC = 0;
+    cout << "Enter side a (in cm): \n";
+    cin >> sideA;
+    cout << "Enter side b (in cm): \n";
+    cin >> sideB;
+    cout << "Enter side c (in cm): \n";
+    cin >> sideC;
+
+    if (sideC >= sideA + sideB || sideA >= sideC + sideB || sideB >= sideA + sideC)
+    {
+        cout << "Please enter valid numbers!" << endl;
+    }
+    else
+    {
+        double perimeter = sideA + sideB + sideC;
+        double halpPerimeter = perimeter / 2;
+        double area = sqrt(halpPerimeter * (halpPerimeter - sideA) 
+            * (halpPerimeter - sideB) * (halpPerimeter - sideC));
+
+        cout << "The perimeter is " << perimeter << " cm." << endl;
+        cout << "The area is " << area << " cm^2." << endl;
+    }
+
+    return 0;
+}
+
