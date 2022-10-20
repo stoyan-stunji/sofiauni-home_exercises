@@ -1,0 +1,55 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    cout << "Enter the first number: \n";
+    int first = 0;
+    cin >> first;
+    cout << "Enter the second number: \n";
+    int second = 0;
+    cin >> second;
+    cout << "Enter the third number: \n";
+    int third = 0;
+    cin >> third;
+
+    int max = first;
+    int avg = second;
+    int min = third;
+    
+    if (first < second && second > third)
+    {
+        max = second;
+        if (first < third)
+        {
+            avg = third;
+            min = first;
+        }
+        else
+        {
+            avg = first;
+            min = third;
+        }
+    }
+    else if (first < third && second < third)
+    {
+        max = third;
+        if (second < first)
+        {
+            avg = first;
+            min = second;
+        }
+        else
+        {
+            avg = second;
+            min = first;
+        }
+    }
+    
+    cout << min << "-" << avg << "-" << max << endl;
+    
+    return 0;
+}
+
