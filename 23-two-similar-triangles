@@ -1,0 +1,53 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a = 0;
+    int b = 0;
+    int c = 0;
+    int A = 0;
+    int B = 0;
+    int C = 0;
+
+    cout << "Enter the sides of the first triangle: \n";
+    cin >> a;
+    cin >> b;
+    cin >> c;
+    
+    cout << "Enter the sides of the second triangle: \n";
+    cin >> A;
+    cin >> B;
+    cin >> C;
+    
+    if (c < a + b || a < b + c || b < a + c || C < A + B || A < B + C || B < C + A)
+    {
+        bool isEqual = (A == a) && (B == b) && (C == c);
+        bool isSimilar = (A * b == a * B) && (a * C == c * A);
+
+        switch (isEqual)
+        {
+        case true:
+            cout << "The triangles ARE equal." << endl;
+            break;
+        case false:
+            switch (isSimilar)
+            {
+            case true:
+                cout << "The triangles ARE similar." << endl;
+                break;
+            case false:
+                cout << "The triangles ARE NOT similar NOR equal." << endl;
+                break;
+            }
+            break;
+        }
+    }
+    else
+    {
+        cout << "Please enter valid numbers!" << endl;
+    }
+    
+    return 0;
+}
