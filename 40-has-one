@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int input = 0;
+    cin >> input;
+
+    int digit = 0;
+    bool hasOne = false;
+
+    while (input > 0)
+    {
+        if (input % 10 == 1)
+        {
+            hasOne = true;
+            break;
+        }
+
+        input /= 10;
+    }
+
+    cout << boolalpha << hasOne << endl;
+}
