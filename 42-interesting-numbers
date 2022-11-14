@@ -1,0 +1,56 @@
+#include <iostream>
+
+using namespace std;
+
+const int ARRAY_MAX_SIZE = 1000;
+
+bool isInteresting(int number)
+{
+	int digits = 0;
+	int numberCopy = number;
+	while (numberCopy != 0)
+	{
+		numberCopy /= 10;
+		digits++;
+	}
+	bool flag = true;
+	for (int i = 0; i < digits; i++)
+	{
+		if (number % 10 >= number / 10 % 10)
+		{
+			number /= 10;
+		}
+		else
+		{
+			flag = false;
+		}
+	}
+	return flag;
+}
+
+int main()
+{
+	cout << "Number of elements: \n";
+	int input = 0;
+	cin >> input;
+	int array[ARRAY_MAX_SIZE];
+
+	cout << "Enter array: \n";
+
+	for (int i = 0; i < input; i++)
+	{
+		cin >> array[i];
+	}
+
+	for (int i = 0; i < input; i++)
+	{
+		if (isInteresting(array[i]))
+		{
+			std::cout << "YES" << " " << endl;
+		}
+		else 
+		{
+			std::cout << "NO" << " " << endl;
+		}
+	}
+}
