@@ -26,17 +26,17 @@ int sumArray(int array[], int size)
     return sum;
 }
 
-int* pointerOfBiggerSum(int array1[], int array2[], int size)
+int* pointerOfSmallerSum(int array1[], int array2[], int size, int *&pointToSmaller)
 {
         if (sumArray(array1, size) > sumArray(array2, size))
         {
-            return 0; //??
+            pointToSmaller = array2;
         }
         else if (sumArray(array1, size) < sumArray(array2, size))
         {
-            return 0; //??
+            pointToSmaller = array1;
         }
-    return nullptr;
+    pointToSmaller = nullptr;
 }
 
 int main()
@@ -44,6 +44,7 @@ int main()
     int array1[MAX_SIZE];
     int array2[MAX_SIZE];
     int size = 0;
+    int* pointer;
 
     cout << "size ";
     cin >> size;
@@ -52,5 +53,5 @@ int main()
     enterArray(array2, size);
     sumArray(array1, size);
     sumArray(array2, size);
-    pointerOfBiggerSum(array1, array2, size);
+    pointerOfBiggerSum(array1, array2, size, *pointer);
 }
